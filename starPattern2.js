@@ -1,23 +1,15 @@
-index = document
-.getElementById("number")
-.addEventListener("input", function () {
-    index = this.value;
-});
-
-function printStars(index) {
+export default function printStars(index) {
 if (index <= 0) {
     return "Please enter a positive integer greater than 0."
 }
-
-let result = ""
+let result = "";
 
 for (let i = 1; i <= index; i++) {
     let str = "";
     for (let j = 1; j <= i; j++) {
         str += "* ";
     }
-    //   console.log(str);
-    result += str + "<br>";
+    result += str + "\n";
 }
 
 for (let i = index - 1; i >= 1; i--) {
@@ -25,17 +17,8 @@ for (let i = index - 1; i >= 1; i--) {
     for (let j = 1; j <= i; j++) {
         str += "* ";
     }
-    result += str + "<br>";
+    result += str + "\n";
 }
-
 return result
 }
 
-document.getElementById("submit").addEventListener("click", function () {
-document.getElementById("result").innerHTML = printStars(index);
-});
-
-document.getElementById("clear").addEventListener("click", function () {
-document.getElementById("number").value = "";
-document.getElementById("result").innerHTML = "";
-});

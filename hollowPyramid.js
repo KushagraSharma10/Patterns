@@ -1,7 +1,4 @@
-let index = document
-.getElementById("number").value
-
-function hollowPyramid(index){
+export default function hollowPyramid(index){
     
     let output = ""
     for (let i = 1; i <= index; i++) {
@@ -21,18 +18,7 @@ function hollowPyramid(index){
             }
         }
         output += row + "\n" 
-        console.log(row);
+        // console.log(row);
     }
     return output
 }
-
-document.getElementById("submit").addEventListener("click", function () {
-    index = parseInt(document.getElementById("number").value);
-    document.getElementById("result").innerHTML = hollowPyramid(index);
-    });
-    
-    document.getElementById("clear").addEventListener("click", function () {
-    document.getElementById("number").value = "";
-    document.getElementById("result").innerHTML = "";
-    });
-    
