@@ -26,4 +26,4 @@ function runSelectedPatterns(patterns = [], index = 5, border = 1) {
     });
 }
 
-runSelectedPatterns([1, 3])
+runSelectedPatterns([1, 2])
